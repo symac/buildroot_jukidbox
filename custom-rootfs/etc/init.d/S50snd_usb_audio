@@ -1,17 +1,17 @@
 #!/bin/sh
 #
-# Start bcm2835 audio driver
+# Start the usb audio driver
 #
 
 case "$1" in
   start)
-        echo -n "Starting bcm2835 audio driver: "
-        modprobe snd-bcm2835
+        echo -n "Starting usb audio driver: "
+        modprobe snd_usb_audio
         echo "OK"
         ;;
   stop)
-        echo -n "Stopping bcm2835 audio driver: "
-        rmmod snd-bcm2835
+        echo -n "Stopping usb audio driver: "
+        rmmod snd_usb_audio
         echo "OK"
         ;;
   restart|reload)
