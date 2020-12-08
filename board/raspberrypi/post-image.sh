@@ -7,6 +7,10 @@ BOARD_NAME="$(basename ${BOARD_DIR})"
 GENIMAGE_CFG="${BOARD_DIR}/genimage-${BOARD_NAME}.cfg"
 GENIMAGE_TMP="${BUILD_DIR}/genimage.tmp"
 
+
+# On masque l'affichage en sortie pour à la place utiliser le résultat de fbv
+sed -e 's/tty1 console/tty1 quiet loglevel=0 logo.nologo vt.global_cursor_default=0 console/' -i "${BINARIES_DIR}/rpi-firmware/cmdline.txt"
+
 for arg in "$@"
 do
 	case "${arg}" in
@@ -39,6 +43,7 @@ __EOF__
 	esac
 
 done
+
 
 # Pass an empty rootpath. genimage makes a full copy of the given rootpath to
 # ${GENIMAGE_TMP}/root so passing TARGET_DIR would be a waste of time and disk
