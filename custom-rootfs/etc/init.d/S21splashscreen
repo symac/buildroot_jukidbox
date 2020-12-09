@@ -12,7 +12,7 @@
 
 
 do_start () {
-    /usr/bin/fbv --noinfo --delay 5 /home/rpi/hello.jpg /home/rpi/hello2.jpg    
+    /usr/bin/fbv --noinfo --delay 5 /root/hello.jpg    
     exit 0
 }
 
