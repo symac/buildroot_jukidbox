@@ -1,0 +1,23 @@
+#!/bin/sh
+#!/bin/sh
+#
+# Start the usb audio driver
+#
+
+case "$1" in
+  start)
+        echo -n "Starting custom service "
+        mount -a
+        echo "OK"
+        ;;
+  stop)
+        echo -n "Stopping custom services "
+        ;;
+  restart|reload)
+        ;;
+  *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+esac
+
+exit $?
