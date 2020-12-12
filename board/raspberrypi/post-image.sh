@@ -11,6 +11,14 @@ GENIMAGE_TMP="${BUILD_DIR}/genimage.tmp"
 # On masque l'affichage en sortie pour à la place utiliser le résultat de fbv
 sed -e 's/tty1 console/tty1 quiet loglevel=0 logo.nologo vt.global_cursor_default=0 console/' -i "${BINARIES_DIR}/rpi-firmware/cmdline.txt"
 
+if ! grep -qE '^display_rotate' "${BINARIES_DIR}/rpi-firmware/config.txt"; then
+	echo "Adding rotate for Jukebox"
+	cat << __EOF__ >> "${BINARIES_DIR}/rpi-firmware/config.txt"
+# Rotation de l'écran pour le jukebox
+display_rotate=1
+__EOF__
+fi
+
 for arg in "$@"
 do
 	case "${arg}" in
