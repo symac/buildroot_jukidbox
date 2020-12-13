@@ -12,7 +12,11 @@
 
 
 do_start () {
-    /usr/bin/fbv --noinfo --delay 5 /root/hello.jpg    
+    # Solution la plus rapide si l'on veut utiliser le logo par défaut
+    dd if=/root/logojukidbox.fb of=/dev/fb0 bs=1091584 count=1 > /dev/null 2>&1
+    
+    # Solution plus générique si l'on veut utiliser n'importe quel JPG/PNG
+    # /usr/bin/fbv --noinfo --delay 5 /root/hello.jpg &    
     exit 0
 }
 
