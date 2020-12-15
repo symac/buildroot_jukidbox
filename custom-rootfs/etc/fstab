@@ -7,4 +7,4 @@ tmpfs		/tmp		tmpfs	mode=1777	0	0
 tmpfs		/run		tmpfs	mode=0755,nosuid,nodev	0	0
 sysfs		/sys		sysfs	defaults	0	0
 /dev/mmcblk0p3  /home/rpi       vfat    defaults,uid=1000,gid=1000   0   0
-/dev/sda1       /media/usb           vfat    defaults        0       0 
+/dev/sda1       /media/usb           vfat    defaults,ro,noatime        0       0
