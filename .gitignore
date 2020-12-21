@@ -1,1 +1,4 @@
+# Le code de jukidbox est géré par ailleurs
 custom-rootfs/root/jukidbox/*
+
+.idea/*
