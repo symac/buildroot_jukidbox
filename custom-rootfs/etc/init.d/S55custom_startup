@@ -8,13 +8,13 @@ case "$1" in
   start)
         echo -n "Starting custom service "
         cd /root/jukidbox
-        # while [ ! -e /dev/sda1 ]; do
-        #   sleep 0.1
-        #   counter=$((counter + 1))
-        #   if [ $counter -ge 50 ]; then
-        #     exit
-        #   fi
-        # done
+        while [ ! -e /dev/sda1 ]; do
+          sleep 0.1
+          counter=$((counter + 1))
+          if [ $counter -ge 500 ]; then
+            exit
+          fi
+        done
 
         mount -a
         clear
