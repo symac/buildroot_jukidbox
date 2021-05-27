@@ -1,7 +1,7 @@
 # Configuration buildroot
 Cette configuration buildroot est destinée à supporter le système [Jukidbox](https://github.com/symac/jukidbox) dans sa version de 2020.
 
-Fonctionne avec un raspberry pi 1. Pour un RPi2 voir un autre dépôt.
+Fonctionne avec un raspberry pi 1. Pour un RPi2 voir [cet autre dépôt](https://github.com/symac/buildroot_jukidbox_pi2).
 
 La configuration de base est largement inspirée du [tutoriel de C. Blaess](https://www.blaess.fr/christophe/buildroot-lab/index.html) (*Copie [internet archive](https://web.archive.org/web/20201214052606/https://www.blaess.fr/christophe/buildroot-lab/index.html)*).
 
