@@ -1,0 +1,3 @@
+[submodule "custom-rootfs/root/jukidbox"]
+	path = custom-rootfs/root/jukidbox
+	url = https://github.com/symac/jukidbox.git
